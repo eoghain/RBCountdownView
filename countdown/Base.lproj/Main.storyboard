@@ -1,25 +1,68 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="eEj-UR-SDl"/>
+                        <viewControllerLayoutGuide type="bottom" id="NdR-Bc-Wog"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="6qr-MW-rqy">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n0s-M6-5bz" customClass="RBCountdownView">
+                                <rect key="frame" x="142" y="250" width="100" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="G1y-ST-oaz"/>
+                                    <constraint firstAttribute="height" constant="100" id="ma5-R5-0cz"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wJj-Jh-AOa" customClass="RBCountdownView">
+                                <rect key="frame" x="250" y="250" width="100" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Ro9-bh-cQ3"/>
+                                    <constraint firstAttribute="height" constant="100" id="s30-db-c1i"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9sG-MY-y5y" customClass="RBCountdownView">
+                                <rect key="frame" x="358" y="250" width="100" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Pn1-6B-CJY"/>
+                                    <constraint firstAttribute="height" constant="100" id="x8U-xF-dnn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.050980392159999999" green="0.42745098040000001" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="9sG-MY-y5y" firstAttribute="bottom" secondItem="wJj-Jh-AOa" secondAttribute="bottom" id="7s7-OR-aW0"/>
+                            <constraint firstItem="wJj-Jh-AOa" firstAttribute="leading" secondItem="n0s-M6-5bz" secondAttribute="trailing" constant="8" id="FMH-ae-7ke"/>
+                            <constraint firstItem="9sG-MY-y5y" firstAttribute="top" secondItem="wJj-Jh-AOa" secondAttribute="top" id="Iqt-2a-FEV"/>
+                            <constraint firstItem="n0s-M6-5bz" firstAttribute="bottom" secondItem="wJj-Jh-AOa" secondAttribute="bottom" id="JMK-UQ-aVt"/>
+                            <constraint firstItem="wJj-Jh-AOa" firstAttribute="centerX" secondItem="6qr-MW-rqy" secondAttribute="centerX" id="Zcb-Qi-IOw"/>
+                            <constraint firstItem="n0s-M6-5bz" firstAttribute="top" secondItem="wJj-Jh-AOa" secondAttribute="top" id="dlW-f9-z23"/>
+                            <constraint firstItem="9sG-MY-y5y" firstAttribute="leading" secondItem="wJj-Jh-AOa" secondAttribute="trailing" constant="8" id="h8G-SP-qts"/>
+                            <constraint firstItem="wJj-Jh-AOa" firstAttribute="centerY" secondItem="6qr-MW-rqy" secondAttribute="centerY" id="nSz-Jh-slm"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="countdown1" destination="n0s-M6-5bz" id="W7L-TA-Muw"/>
+                        <outlet property="countdown2" destination="wJj-Jh-AOa" id="m1V-bc-bzV"/>
+                        <outlet property="countdown3" destination="9sG-MY-y5y" id="GNC-88-UGP"/>
+                        <outlet property="view" destination="6qr-MW-rqy" id="JzN-da-Tee"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="429"/>
         </scene>
     </scenes>
 </document>

@@ -15,6 +15,7 @@
 		31B1C8F11BEC323E0068EB67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31B1C8EF1BEC323E0068EB67 /* LaunchScreen.storyboard */; };
 		31B1C8FC1BEC323E0068EB67 /* countdownTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B1C8FB1BEC323E0068EB67 /* countdownTests.m */; };
 		31B1C9071BEC323E0068EB67 /* countdownUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B1C9061BEC323E0068EB67 /* countdownUITests.m */; };
+		31B1C91A1BED5BD80068EB67 /* RBCountdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B1C9191BED5BD80068EB67 /* RBCountdownView.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		31B1C9021BEC323E0068EB67 /* countdownUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = countdownUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31B1C9061BEC323E0068EB67 /* countdownUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = countdownUITests.m; sourceTree = "<group>"; };
 		31B1C9081BEC323E0068EB67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31B1C9181BED5BD80068EB67 /* RBCountdownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBCountdownView.h; sourceTree = "<group>"; };
+		31B1C9191BED5BD80068EB67 /* RBCountdownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBCountdownView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 		31B1C8D51BEC323E0068EB67 = {
 			isa = PBXGroup;
 			children = (
+				31B1C9171BED5BC30068EB67 /* Classes */,
 				31B1C8E01BEC323E0068EB67 /* countdown */,
 				31B1C8FA1BEC323E0068EB67 /* countdownTests */,
 				31B1C9051BEC323E0068EB67 /* countdownUITests */,
@@ -138,6 +142,15 @@
 				31B1C9081BEC323E0068EB67 /* Info.plist */,
 			);
 			path = countdownUITests;
+			sourceTree = "<group>";
+		};
+		31B1C9171BED5BC30068EB67 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				31B1C9181BED5BD80068EB67 /* RBCountdownView.h */,
+				31B1C9191BED5BD80068EB67 /* RBCountdownView.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +285,7 @@
 			files = (
 				31B1C8E91BEC323E0068EB67 /* ViewController.m in Sources */,
 				31B1C8E61BEC323E0068EB67 /* AppDelegate.m in Sources */,
+				31B1C91A1BED5BD80068EB67 /* RBCountdownView.m in Sources */,
 				31B1C8E31BEC323E0068EB67 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,7 +429,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = countdown/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Intuit.countdown;
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.countdown;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -426,7 +440,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = countdown/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Intuit.countdown;
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.countdown;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -437,7 +451,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = countdownTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Intuit.countdownTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.countdownTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/countdown.app/countdown";
 			};
@@ -449,7 +463,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = countdownTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Intuit.countdownTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.countdownTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/countdown.app/countdown";
 			};
@@ -460,7 +474,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = countdownUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Intuit.countdownUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.countdownUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = countdown;
 				USES_XCTRUNNER = YES;
@@ -472,7 +486,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = countdownUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Intuit.countdownUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.countdownUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = countdown;
 				USES_XCTRUNNER = YES;
@@ -498,6 +512,7 @@
 				31B1C90D1BEC323E0068EB67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		31B1C90E1BEC323E0068EB67 /* Build configuration list for PBXNativeTarget "countdownTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +521,7 @@
 				31B1C9101BEC323E0068EB67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		31B1C9111BEC323E0068EB67 /* Build configuration list for PBXNativeTarget "countdownUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +530,7 @@
 				31B1C9131BEC323E0068EB67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
